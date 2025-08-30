@@ -31,3 +31,6 @@ body{
 .flash{
     background-color: rgb(255, 255, 255);
 }
+.userFlash{
+    background-color: rgb(87, 245, 13);
+}
