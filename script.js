@@ -4,8 +4,10 @@ let btns = ["yellow","red","green","purple"];
 
  let started = false;
  let level = 0;
+ let highScore;
 
  let h2 = document.querySelector("h2");
+ let h3 = document.querySelector("h3")
 
  document.addEventListener("keydown", function(){
     if(started === false){ 
@@ -53,7 +55,9 @@ function userFlash(btn){
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "black";
-        },250)
+        },250);
+        highScore = level;
+        h3.innerHTML =`High socre : ${highScore}`;
         reset();
     }
      
@@ -78,6 +82,7 @@ let allBtns = document.querySelectorAll(".btn")
     started = false;
     gameSeq =[];
     UserSeq =[];
+    
     level = 0;
  }
 
